@@ -34,6 +34,10 @@ export class Blacklist {
     get throwaway(){
         return asyncFilter(this.all, isThrowaway)
     }
+
+    get(hash:string) : BlacklistEntry{
+        return this.all.find((entry) => entry.hash === hash);
+    }
 }
 
 function asyncFilter(data, filter){

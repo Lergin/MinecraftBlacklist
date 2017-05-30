@@ -5,7 +5,7 @@ export class BlacklistEntry {
     private _domain: string = "";
     private _server: string = "";
     private _changes: any = [];
-    private readonly _hash: string;
+    private _hash: string;
 
     constructor(hash){
         this._hash = hash;
@@ -13,6 +13,10 @@ export class BlacklistEntry {
 
     get hash(){
         return this._hash;
+    }
+
+    set hash(value: string) {
+        this._hash = value;
     }
 
     get identified(){
@@ -24,9 +28,7 @@ export class BlacklistEntry {
     }
 
     set domain(domain){
-        if(isHash(this.hash, domain)){
-            this._domain = domain;
-        }
+        this._domain = domain;
     }
 
     async throwaway(){
@@ -51,8 +53,8 @@ export class BlacklistEntry {
     set server(value) {
         this._server = value;
     }
-}
 
-function isHash(hash, value) {
-    return sha1(value) === hash;
+    static isHash(hash, value){
+        return sha1(value) === hash;
+    }
 }

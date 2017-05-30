@@ -1,22 +1,18 @@
 import {Blacklist} from "./Blacklist";
-import {BlacklistEntry} from "./BlacklistEntry";
+import {FBBlacklistEntry} from "./FBBlacklistEntry";
 
-class FirebaseBlacklist extends Blacklist{
-    private _ref;
+export class FBBlacklist extends Blacklist{
+    private _ref: admin.database.Reference;
 
     constructor(ref) {
         super();
+
         this._ref = ref;
-    }
 
-    async update() {
-        this._ref.once('value', (snapshot)=>{
-            this._entries = snapshot.val().map((a)=>{
-                let newEntry = new BlacklistEntry(a.hash);
-                newEntry.domain = a.domain;
-
-                return newEntry;
-            });
+        this._ref.on("child_added", (snapshot)=>{
+            this._entries.push(new FBBlacklistEntry(snapshot.ref))
         })
     }
+
+    async update() {}
 }
