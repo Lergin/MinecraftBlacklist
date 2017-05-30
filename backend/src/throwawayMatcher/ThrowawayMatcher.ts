@@ -1,17 +1,17 @@
 export class ThrowawayMatcher {
     private static _instance:ThrowawayMatcher = null;
-    private _strings: string[] = [];
+    private _strings: Set<string> = new Set();
 
     static get instance(): ThrowawayMatcher{
         return ThrowawayMatcher._instance;
     };
 
-    constructor(strings) {
+    constructor(strings:Array<string>) {
         if(ThrowawayMatcher.instance !== null){
             return ThrowawayMatcher.instance;
         }
 
-        this._strings = strings;
+        this._strings = new Set(strings);
 
         ThrowawayMatcher._instance = this;
     }
@@ -25,16 +25,14 @@ export class ThrowawayMatcher {
     }
 
     add(string) {
-        this._strings.push(string);
+        this._strings.add(string);
     }
 
     remove(string) {
-        let index = this._strings.indexOf(string);
-
-        this._strings.splice(index, 1);
+        this._strings.delete(string);
     }
 
-    async doesMatch(domain){
-        return this.strings.some((a)=>domain.match(a));
+    doesMatch(domain){
+        return [...this.strings].some((a)=>domain.match(a));
     }
 }

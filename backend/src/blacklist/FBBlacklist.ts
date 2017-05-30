@@ -1,5 +1,5 @@
-import {Blacklist} from "./Blacklist";
 import {FBBlacklistEntry} from "./FBBlacklistEntry";
+import {Blacklist} from "./Blacklist";
 
 export class FBBlacklist extends Blacklist{
     private _ref: admin.database.Reference;
@@ -10,9 +10,7 @@ export class FBBlacklist extends Blacklist{
         this._ref = ref;
 
         this._ref.on("child_added", (snapshot)=>{
-            this._entries.push(new FBBlacklistEntry(snapshot.ref))
+            this._entries.push(new FBBlacklistEntry(snapshot.ref));
         })
     }
-
-    async update() {}
 }

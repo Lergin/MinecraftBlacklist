@@ -8,67 +8,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fetch = require("node-fetch");
-const BlacklistEntry_1 = require("./BlacklistEntry");
+const Utils_1 = require("../Utils");
 class Blacklist {
     constructor() {
-        this._apiEndpoint = 'https://mcapi.ca/blockedservers/';
+        this._entries = [];
     }
-    update() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(this._apiEndpoint).then((res) => res.json());
-            let entries = response.blocked.map((a) => new BlacklistEntry_1.BlacklistEntry(a));
-            entries.forEach(addIpFromHashList(response.found));
-            this._entries = entries;
-        });
-    }
-    get all() {
+    get entries() {
         return this._entries;
     }
     get known() {
-        return this.all.filter(isKnown);
+        return this.entries.filter((e) => e.identified);
     }
     get unknown() {
-        return this.all.filter(isUnknown);
+        return this.entries.filter((e) => !e.identified);
     }
     get throwaway() {
-        return asyncFilter(this.all, isThrowaway);
+        return Utils_1.asyncFilter(this.entries, (e) => __awaiter(this, void 0, void 0, function* () { return !(yield e.throwaway()); }));
+    }
+    get(hash) {
+        return this.entries.find((entry) => entry.hash === hash);
     }
 }
 exports.Blacklist = Blacklist;
-function asyncFilter(data, filter) {
-    return Promise.all(data.map((element, index) => filter(element, index, data)))
-        .then(result => {
-        return data.filter((element, index) => {
-            return result[index];
-        });
-    });
-}
-function isKnown(entry) {
-    return entry.identified;
-}
-function isUnknown(entry) {
-    return !entry.identified;
-}
-function isThrowaway(entry) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return !(yield entry.throwaway());
-    });
-}
-function hashListToMap(hashlist) {
-    let map = new Map();
-    hashlist.forEach((e) => {
-        map.set(e.sha1, e.ip);
-    });
-    return map;
-}
-function addIpFromHashList(hashlist) {
-    let map = hashListToMap(Object.values(hashlist));
-    return function (entry) {
-        if (map.has(entry.hash)) {
-            entry.domain = map.get(entry.hash);
-        }
-        return entry;
-    };
-}
 //# sourceMappingURL=Blacklist.js.map

@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin";
-import {Blacklist} from "./blacklist/Blacklist";
 import {FBThrowawayMatcher} from "./throwawayMatcher/FBThrowawayMatcher";
+import {McApiBlacklist} from "./blacklist/McApiBlacklist";
 const serviceAccount = require("./minecraftblacklist-92f32-firebase-adminsdk-a6wx7-113e00dcc2.json");
 
 async function main(){
@@ -12,7 +12,7 @@ async function main(){
     let throwawayMatcher = new FBThrowawayMatcher(admin.database().ref("throwawayStrings"));
     await throwawayMatcher.loadingPromise;
 
-    let list = new Blacklist();
+    let list = new McApiBlacklist();
 
     list.update().then(async ()=>{
         console.log(list.unknown.length);

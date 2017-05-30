@@ -20,16 +20,17 @@ class BlacklistEntry {
     get hash() {
         return this._hash;
     }
+    set hash(value) {
+        this._hash = value;
+    }
     get identified() {
-        return this.domain !== undefined;
+        return BlacklistEntry.isHash(this.hash, this.domain);
     }
     get domain() {
         return this._domain;
     }
-    set domain(domain) {
-        if (isHash(this.hash, domain)) {
-            this._domain = domain;
-        }
+    set domain(value) {
+        this._domain = value;
     }
     throwaway() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -51,9 +52,9 @@ class BlacklistEntry {
     set server(value) {
         this._server = value;
     }
+    static isHash(hash, value) {
+        return sha1(value) === hash;
+    }
 }
 exports.BlacklistEntry = BlacklistEntry;
-function isHash(hash, value) {
-    return sha1(value) === hash;
-}
 //# sourceMappingURL=BlacklistEntry.js.map

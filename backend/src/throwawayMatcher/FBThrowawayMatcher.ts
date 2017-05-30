@@ -1,6 +1,7 @@
 import {ThrowawayMatcher} from "./ThrowawayMatcher";
+import {Loading} from "../Utils";
 
-export class FBThrowawayMatcher extends ThrowawayMatcher{
+export class FBThrowawayMatcher extends ThrowawayMatcher implements Loading{
     private _loadingPromise: Promise<any>;
 
     constructor(ref) {
@@ -14,7 +15,7 @@ export class FBThrowawayMatcher extends ThrowawayMatcher{
 
         // workaround as we only get the new data and aren't saving the keys
         ref.on('child_changed', () => {
-            this.strings = [];
+            this.strings = new Set();
 
             this._loadingPromise = ref.once('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
@@ -36,11 +37,7 @@ export class FBThrowawayMatcher extends ThrowawayMatcher{
         return this._loadingPromise;
     }
 
-    async doesMatch(domain) {
-        if(this._loadingPromise){
-            await this._loadingPromise;
-        }
-
+    doesMatch(domain) {
         return super.doesMatch(domain);
     }
 }

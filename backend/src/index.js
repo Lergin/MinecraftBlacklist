@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const admin = require("firebase-admin");
-const Blacklist_1 = require("./blacklist/Blacklist");
 const FBThrowawayMatcher_1 = require("./throwawayMatcher/FBThrowawayMatcher");
+const McApiBlacklist_1 = require("./blacklist/McApiBlacklist");
 const serviceAccount = require("./minecraftblacklist-92f32-firebase-adminsdk-a6wx7-113e00dcc2.json");
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -20,7 +20,7 @@ function main() {
         });
         let throwawayMatcher = new FBThrowawayMatcher_1.FBThrowawayMatcher(admin.database().ref("throwawayStrings"));
         yield throwawayMatcher.loadingPromise;
-        let list = new Blacklist_1.Blacklist();
+        let list = new McApiBlacklist_1.McApiBlacklist();
         list.update().then(() => __awaiter(this, void 0, void 0, function* () {
             console.log(list.unknown.length);
             console.log(list.known.length);

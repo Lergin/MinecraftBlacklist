@@ -1,10 +1,17 @@
 const sha1 = require("sha1");
 import {ThrowawayMatcher} from "../throwawayMatcher/ThrowawayMatcher";
 
+export type BlacklistEntryChangeTypes = "ADD" | "DELETE";
+
+export type BlacklistEntryChange = {
+    type: BlacklistEntryChangeTypes,
+    date: Date
+}
+
 export class BlacklistEntry {
     private _domain: string = "";
     private _server: string = "";
-    private _changes: any = [];
+    private _changes: Array<BlacklistEntryChange> = [];
     private _hash: string;
 
     constructor(hash){
@@ -20,15 +27,15 @@ export class BlacklistEntry {
     }
 
     get identified(){
-        return this.domain !== undefined;
+        return BlacklistEntry.isHash(this.hash, this.domain);
     }
-    
+
     get domain(){
         return this._domain;
     }
 
-    set domain(domain){
-        this._domain = domain;
+    set domain(value){
+        this._domain = value;
     }
 
     async throwaway(){
@@ -39,7 +46,7 @@ export class BlacklistEntry {
         return this._changes;
     }
 
-    addChange(type, date){
+    addChange(type: BlacklistEntryChangeTypes, date: Date){
         this._changes.push({
             type: type,
             date: date
