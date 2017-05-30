@@ -10,8 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 class ThrowawayMatcher {
     constructor(strings) {
+        this._strings = [];
         if (ThrowawayMatcher.instance !== null) {
-            console.log("hjk");
             return ThrowawayMatcher.instance;
         }
         this._strings = strings;

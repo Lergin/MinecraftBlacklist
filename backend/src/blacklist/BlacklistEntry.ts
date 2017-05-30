@@ -2,16 +2,12 @@ const sha1 = require("sha1");
 import {ThrowawayMatcher} from "../throwawayMatcher/ThrowawayMatcher";
 
 export class BlacklistEntry {
-    private _domain: string;
-    private _server: string;
-    private _changes: any;
+    private _domain: string = "";
+    private _server: string = "";
+    private _changes: any = [];
     private readonly _hash: string;
 
     constructor(hash){
-        this._domain = "";
-        this._server = "";
-        this._changes = [];
-
         this._hash = hash;
     }
 
