@@ -1,0 +1,86 @@
+{
+	"entries": {
+		"hash": {
+			"hash": "",
+			"domain": "",
+			"changes":[
+				{
+					"type": "added",
+					"date": "date"
+				}
+			],
+			"active": true,
+			"identified": false,
+			"throwaway": false,
+			"relatedServer": ""
+		}
+	},
+
+	"servers": {
+		"serverhash": {
+			"hashs": [],
+			"domain": "",
+			"ip": "",
+			"port": 25565,
+			"hasTriedToCircumvent": false,
+			"active": true,
+			"changes": [
+				{
+					"type":"added",
+					"date": "date",
+					"hash": "hash"
+				}
+			],
+			"ping": {
+				"players": 0,
+				"slots": 0,
+				"motd": "",
+				"favicon": "",
+				"version": ""
+			},
+			"info": {
+				"name": "",
+				"forum": "",
+				"hp": "",
+				"discord": "",
+				"ts": "",
+				"shop": "",
+				"promotesSquid": false
+			}
+		}
+	},
+
+	"stats": {
+		"time_hashes": {
+			"date": 0
+		},
+		"time_totalHashes": {
+			"date": 0
+		},
+		"time_servers": {
+			"date": 0
+		},
+		"time_identifiedHashes": {
+			"date": 0
+		},
+		"time_unidentifiedHashes": {
+			"date": 0
+		},
+		"time_throwawayHashes": {
+			"date": 0
+		},
+		"pie_identified":{
+			"identified": 0,
+			"unidentified": 0
+		},
+		"pie_circumvention":{
+			"has tried": 0,
+			"hasn't tried": 0
+		}
+	},
+
+	"throwawayMatches": [
+		"ddns",
+		"serveftp.com"
+	]
+}
