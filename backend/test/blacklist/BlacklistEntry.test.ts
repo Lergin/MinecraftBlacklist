@@ -45,7 +45,7 @@ describe('BlacklistEntry', () => {
         });
     });
 
-    describe('#isHash', () => {
+    describe('#isHash()', () => {
         it('should be true if the first value is the sha1 hash of the second', () => {
             expect(BlacklistEntry.isHash("8c7122d652cb7be22d1986f1f30b07fd5108d9c0", "*.example.com")).to.be.true;
         });

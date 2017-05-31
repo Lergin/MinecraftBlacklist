@@ -8,9 +8,6 @@ class BlacklistImpl extends Blacklist_1.Blacklist {
     add(entry) {
         this._entries.push(entry);
     }
-    remove(hash) {
-        this._entries = this.entries.filter((e) => e.hash !== hash);
-    }
 }
 describe('Blacklist', () => {
     describe('#consturctor()', () => {
@@ -18,7 +15,7 @@ describe('Blacklist', () => {
             chai_1.expect(new BlacklistImpl().entries).to.be.empty;
         });
     });
-    describe('#entries()', () => {
+    describe('#entries', () => {
         it('should have all entries that are added', () => {
             let blacklist = new BlacklistImpl();
             blacklist.add(new BlacklistEntry_1.BlacklistEntry('1'));
@@ -26,7 +23,7 @@ describe('Blacklist', () => {
             chai_1.expect(blacklist.entries).to.have.length(2);
         });
     });
-    describe('#unknown()', () => {
+    describe('#unknown', () => {
         it('should have all entries that are unknown', () => {
             let blacklist = new BlacklistImpl();
             blacklist.add(new BlacklistEntry_1.BlacklistEntry('1'));

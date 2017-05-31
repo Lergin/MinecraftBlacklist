@@ -16,7 +16,7 @@ describe('Blacklist', () => {
         });
     });
 
-    describe('#entries()', () => {
+    describe('#entries', () => {
         it('should have all entries that are added', () => {
            let blacklist = new BlacklistImpl();
 
@@ -27,7 +27,7 @@ describe('Blacklist', () => {
         });
     });
 
-    describe('#unknown()', () => {
+    describe('#unknown', () => {
         it('should have all entries that are unknown', () => {
            let blacklist = new BlacklistImpl();
 
