@@ -3,6 +3,9 @@ import 'mocha';
 import {Blacklist} from "../../src/blacklist/Blacklist";
 import {BlacklistEntry} from "../../src/blacklist/BlacklistEntry";
 
+/**
+ * simple [[Blacklist]] implementation for testing purposes
+ */
 class BlacklistImpl extends Blacklist{
     add(entry:BlacklistEntry) {
         this._entries.push(entry);

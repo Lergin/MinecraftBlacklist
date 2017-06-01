@@ -2,20 +2,20 @@ import {ThrowawayMatcher} from "./ThrowawayMatcher";
 import {Loading} from "../Utils";
 
 /**
- * a ThrowawayMatcher that uses Firebase as a data source for the strings
+ * a [[ThrowawayMatcher]] that uses [[https://firebase.google.com Firebase]] as a data source for the strings
  *
- * the method doesMatch shouldn't be used before loadingPromise was resolved
+ * the method [[doesMatch]] shouldn't be used before [[loadingPromise]] was resolved
  */
 export class FBThrowawayMatcher extends ThrowawayMatcher implements Loading{
     private _loadingPromise: Promise<any>;
 
     /**
-     * creates a new ThrowawayMatcher using a firebase database reference that contains a list of strings that should be
-     * used for the matching.
+     * creates a new [[ThrowawayMatcher]] using a [[admin.database.Reference firebase database reference]] that contains
+     * a list of strings that should be used for the matching.
      *
      * If the data in the firebase changes these changes automatically get reflected to the instance.
      *
-     * @param ref the firebase database reference
+     * @param ref the firebase database reference with the data
      */
     constructor(ref:admin.database.Reference) {
         super([]);
@@ -50,7 +50,7 @@ export class FBThrowawayMatcher extends ThrowawayMatcher implements Loading{
 
     /**
      * a promise that is resolved if all the data is loaded
-     * @return {Promise<any>}
+     * @return a promise that is resolved if the data is loaded
      */
     get loadingPromise() {
         return this._loadingPromise;
