@@ -64,6 +64,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>a implementation of the <a href="blacklist.html">Blacklist</a> that gets it data from the <a href="https://mcapi.ca" class="external">MCAPI</a> endpoint for the
+						blacklist entries that also contains identified domains of the hashes (<a href="https://mcapi.ca/blockedservers/" class="external">https://mcapi.ca/blockedservers/</a>).</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -135,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L8">src/blacklist/McApiBlacklist.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L34">src/blacklist/McApiBlacklist.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="mcapiblacklist.html" class="tsd-signature-type">McApiBlacklist</a></h4>
@@ -148,12 +156,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="_apiendpoint" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _api<wbr>Endpoint</h3>
-					<div class="tsd-signature tsd-kind-icon">_api<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">_api<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://mcapi.ca/blockedservers/&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L7">src/blacklist/McApiBlacklist.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L30">src/blacklist/McApiBlacklist.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the url of the api endpoint</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_entries" class="tsd-anchor"></a>
@@ -162,7 +175,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#_entries">_entries</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L11">src/blacklist/Blacklist.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L11">src/blacklist/Blacklist.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -177,9 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">_loading<wbr>Promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L8">src/blacklist/McApiBlacklist.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L34">src/blacklist/McApiBlacklist.ts:34</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>a promise that is resolved as soon as the data is loaded</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -195,7 +213,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#entries">entries</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L17">src/blacklist/Blacklist.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L17">src/blacklist/Blacklist.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -219,7 +237,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#known">known</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L25">src/blacklist/Blacklist.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L25">src/blacklist/Blacklist.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -242,10 +260,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L28">src/blacklist/McApiBlacklist.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L59">src/blacklist/McApiBlacklist.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>the promise that is resolved after the initial data is loaded</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>a promise that is resolved as soon as the initial dat is loaded</p>
 						</li>
 					</ul>
 				</section>
@@ -260,7 +284,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#throwaway">throwaway</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L41">src/blacklist/Blacklist.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L41">src/blacklist/Blacklist.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,7 +308,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#unknown">unknown</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L33">src/blacklist/Blacklist.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L33">src/blacklist/Blacklist.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -311,7 +335,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L50">src/blacklist/Blacklist.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/Blacklist.ts#L50">src/blacklist/Blacklist.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -343,9 +367,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L17">src/blacklist/McApiBlacklist.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L45">src/blacklist/McApiBlacklist.ts:45</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fetches the data from the <a href="mcapiblacklist.html#_apiendpoint">api endpoint</a> and then converts it&#39;s data into
+									<a href="blacklistentry.html">BlacklistEntries</a>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -360,9 +390,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L32">src/blacklist/McApiBlacklist.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L68">src/blacklist/McApiBlacklist.ts:68</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>adds all</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -377,22 +412,29 @@
 					<a name="hashlisttomap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> hash<wbr>List<wbr>ToMap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">hash<wbr>List<wbr>ToMap<span class="tsd-signature-symbol">(</span>hashList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">hash<wbr>List<wbr>ToMap<span class="tsd-signature-symbol">(</span>hashList<span class="tsd-signature-symbol">: </span><a href="../globals.html#mcapiblacklistentryfound" class="tsd-signature-type">McApiBlacklistEntryFound</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L44">src/blacklist/McApiBlacklist.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/McApiBlacklist.ts#L85">src/blacklist/McApiBlacklist.ts:85</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>converts a list of hashes that have the form <code>{&quot;sha1&quot;: &quot;???&quot;, &quot;ip&quot;: &quot;???&quot;}</code> into a map that uses the <code>sha1</code>
+									property as key and the <code>ip</code> as value</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>hashList: <span class="tsd-signature-type">any</span></h5>
+									<h5>hashList: <a href="../globals.html#mcapiblacklistentryfound" class="tsd-signature-type">McApiBlacklistEntryFound</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the converted data as a Map</p>
 						</li>
 					</ul>
 				</section>
@@ -488,6 +530,15 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#blacklistentrychangetypes" class="tsd-kind-icon">Blacklist<wbr>Entry<wbr>Change<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="../globals.html#mcapiblacklistentryfound" class="tsd-kind-icon">Mc<wbr>Api<wbr>Blacklist<wbr>Entry<wbr>Found</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="../globals.html#mcapiblacklistentryunknown" class="tsd-kind-icon">Mc<wbr>Api<wbr>Blacklist<wbr>Entry<wbr>Unknown</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="../globals.html#mcapiblacklistresponse" class="tsd-kind-icon">Mc<wbr>Api<wbr>Blacklist<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#serviceaccount" class="tsd-kind-icon">service<wbr>Account</a>

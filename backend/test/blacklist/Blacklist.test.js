@@ -4,6 +4,9 @@ const chai_1 = require("chai");
 require("mocha");
 const Blacklist_1 = require("../../src/blacklist/Blacklist");
 const BlacklistEntry_1 = require("../../src/blacklist/BlacklistEntry");
+/**
+ * simple [[Blacklist]] implementation for testing purposes
+ */
 class BlacklistImpl extends Blacklist_1.Blacklist {
     add(entry) {
         this._entries.push(entry);
