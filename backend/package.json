@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "tsc && mocha **/*.test.js",
-    "docs": "typedoc --out docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --excludeExternals",
-    "docs-full": "typedoc --out docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --includeDeclarations"
+    "docs": "typedoc --out ../docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --excludeExternals",
+    "docs-full": "typedoc --out ../docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --includeDeclarations"
   },
   "author": "",
   "license": "MIT",

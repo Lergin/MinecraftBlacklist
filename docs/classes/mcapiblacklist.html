@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FBBlacklist | Minecraft Blacklist Tool</title>
+	<title>McApiBlacklist | Minecraft Blacklist Tool</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="fbblacklist.html">FBBlacklist</a>
+					<a href="mcapiblacklist.html">McApiBlacklist</a>
 				</li>
 			</ul>
-			<h1>Class FBBlacklist</h1>
+			<h1>Class McApiBlacklist</h1>
 		</div>
 	</div>
 </header>
@@ -71,10 +71,16 @@
 						<a href="blacklist.html" class="tsd-signature-type">Blacklist</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">FBBlacklist</span>
+								<span class="target">McApiBlacklist</span>
 							</li>
 						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/loading.html" class="tsd-signature-type">Loading</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -84,29 +90,34 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="fbblacklist.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="mcapiblacklist.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="fbblacklist.html#_entries" class="tsd-kind-icon">_entries</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="fbblacklist.html#_ref" class="tsd-kind-icon">_ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mcapiblacklist.html#_apiendpoint" class="tsd-kind-icon">_api<wbr>Endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mcapiblacklist.html#_entries" class="tsd-kind-icon">_entries</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mcapiblacklist.html#_loadingpromise" class="tsd-kind-icon">_loading<wbr>Promise</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklist.html#entries" class="tsd-kind-icon">entries</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklist.html#known" class="tsd-kind-icon">known</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklist.html#throwaway" class="tsd-kind-icon">throwaway</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklist.html#unknown" class="tsd-kind-icon">unknown</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="mcapiblacklist.html#entries" class="tsd-kind-icon">entries</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="mcapiblacklist.html#known" class="tsd-kind-icon">known</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mcapiblacklist.html#loadingpromise" class="tsd-kind-icon">loading<wbr>Promise</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="mcapiblacklist.html#throwaway" class="tsd-kind-icon">throwaway</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="mcapiblacklist.html#unknown" class="tsd-kind-icon">unknown</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklist.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mcapiblacklist.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mcapiblacklist.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="mcapiblacklist.html#addipfromhashlist" class="tsd-kind-icon">add<wbr>IpFrom<wbr>Hash<wbr>List</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="mcapiblacklist.html#hashlisttomap" class="tsd-kind-icon">hash<wbr>List<wbr>ToMap</a></li>
 							</ul>
 						</section>
 					</div>
@@ -118,28 +129,32 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new FBBlacklist<span class="tsd-signature-symbol">(</span>ref<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="fbblacklist.html" class="tsd-signature-type">FBBlacklist</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>McApi<wbr>Blacklist<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mcapiblacklist.html" class="tsd-signature-type">McApiBlacklist</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/blacklist/FBBlacklist.ts:5</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L8">src/blacklist/McApiBlacklist.ts:8</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>ref: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="fbblacklist.html" class="tsd-signature-type">FBBlacklist</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="mcapiblacklist.html" class="tsd-signature-type">McApiBlacklist</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_apiendpoint" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _api<wbr>Endpoint</h3>
+					<div class="tsd-signature tsd-kind-icon">_api<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L7">src/blacklist/McApiBlacklist.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_entries" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _entries</h3>
@@ -147,7 +162,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#_entries">_entries</a></p>
 						<ul>
-							<li>Defined in src/blacklist/Blacklist.ts:11</li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L11">src/blacklist/Blacklist.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,17 +172,17 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_ref" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _ref</h3>
-					<div class="tsd-signature tsd-kind-icon">_ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Reference</span></div>
+					<a name="_loadingpromise" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _loading<wbr>Promise</h3>
+					<div class="tsd-signature tsd-kind-icon">_loading<wbr>Promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/blacklist/FBBlacklist.ts:5</li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L8">src/blacklist/McApiBlacklist.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 					<a name="entries" class="tsd-anchor"></a>
@@ -180,7 +195,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#entries">entries</a></p>
 								<ul>
-									<li>Defined in src/blacklist/Blacklist.ts:17</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L17">src/blacklist/Blacklist.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +219,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#known">known</a></p>
 								<ul>
-									<li>Defined in src/blacklist/Blacklist.ts:25</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L25">src/blacklist/Blacklist.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -214,6 +229,23 @@
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="blacklistentry.html" class="tsd-signature-type">BlacklistEntry</a><span class="tsd-signature-symbol">[]</span></h4>
 							<p>the identified entries</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="loadingpromise" class="tsd-anchor"></a>
+					<h3>loading<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> loadingPromise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L28">src/blacklist/McApiBlacklist.ts:28</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -228,7 +260,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#throwaway">throwaway</a></p>
 								<ul>
-									<li>Defined in src/blacklist/Blacklist.ts:41</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L41">src/blacklist/Blacklist.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -252,7 +284,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#unknown">unknown</a></p>
 								<ul>
-									<li>Defined in src/blacklist/Blacklist.ts:33</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L33">src/blacklist/Blacklist.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -266,7 +298,7 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="get" class="tsd-anchor"></a>
@@ -279,7 +311,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklist.html">Blacklist</a>.<a href="blacklist.html#get">get</a></p>
 								<ul>
-									<li>Defined in src/blacklist/Blacklist.ts:50</li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/Blacklist.ts#L50">src/blacklist/Blacklist.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -298,6 +330,69 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="blacklistentry.html" class="tsd-signature-type">BlacklistEntry</a></h4>
 							<p>the assigned entry or nothing</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L17">src/blacklist/McApiBlacklist.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="addipfromhashlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> add<wbr>IpFrom<wbr>Hash<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>IpFrom<wbr>Hash<wbr>List<span class="tsd-signature-symbol">(</span>hashList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L32">src/blacklist/McApiBlacklist.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hashList: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<a name="hashlisttomap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> hash<wbr>List<wbr>ToMap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">hash<wbr>List<wbr>ToMap<span class="tsd-signature-symbol">(</span>hashList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/750fd52/backend/src/blacklist/McApiBlacklist.ts#L44">src/blacklist/McApiBlacklist.ts:44</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hashList: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -322,48 +417,63 @@
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="blacklistimpl.html" class="tsd-kind-icon">Blacklist<wbr>Impl</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="fbblacklist.html" class="tsd-kind-icon">FBBlacklist</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="fbblacklist.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="fbblacklist.html#_entries" class="tsd-kind-icon">_entries</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="fbblacklist.html#_ref" class="tsd-kind-icon">_ref</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="fbblacklist.html#entries" class="tsd-kind-icon">entries</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="fbblacklist.html#known" class="tsd-kind-icon">known</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="fbblacklist.html#throwaway" class="tsd-kind-icon">throwaway</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="fbblacklist.html#unknown" class="tsd-kind-icon">unknown</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="fbblacklist.html#get" class="tsd-kind-icon">get</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="fbblacklistentry.html" class="tsd-kind-icon">FBBlacklist<wbr>Entry</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="fbthrowawaymatcher.html" class="tsd-kind-icon">FBThrowaway<wbr>Matcher</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="mcapiblacklist.html" class="tsd-kind-icon">Mc<wbr>Api<wbr>Blacklist</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="mcapiblacklist.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="mcapiblacklist.html#_apiendpoint" class="tsd-kind-icon">_api<wbr>Endpoint</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="mcapiblacklist.html#_entries" class="tsd-kind-icon">_entries</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="mcapiblacklist.html#_loadingpromise" class="tsd-kind-icon">_loading<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="mcapiblacklist.html#entries" class="tsd-kind-icon">entries</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="mcapiblacklist.html#known" class="tsd-kind-icon">known</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="mcapiblacklist.html#loadingpromise" class="tsd-kind-icon">loading<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="mcapiblacklist.html#throwaway" class="tsd-kind-icon">throwaway</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="mcapiblacklist.html#unknown" class="tsd-kind-icon">unknown</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mcapiblacklist.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mcapiblacklist.html#update" class="tsd-kind-icon">update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="mcapiblacklist.html#addipfromhashlist" class="tsd-kind-icon">add<wbr>IpFrom<wbr>Hash<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+								<a href="mcapiblacklist.html#hashlisttomap" class="tsd-kind-icon">hash<wbr>List<wbr>ToMap</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="server.html" class="tsd-kind-icon">Server</a>
 					</li>
