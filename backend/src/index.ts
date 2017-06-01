@@ -1,7 +1,7 @@
 import * as admin from "firebase-admin";
 import {FBThrowawayMatcher} from "./throwawayMatcher/FBThrowawayMatcher";
 import {McApiBlacklist} from "./blacklist/McApiBlacklist";
-const serviceAccount = require("./minecraftblacklist-92f32-firebase-adminsdk-a6wx7-113e00dcc2.json");
+const serviceAccount = require("../../firebase_service_account.json");
 
 async function main(){
     admin.initializeApp({

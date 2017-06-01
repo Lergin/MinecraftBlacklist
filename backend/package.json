@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "tsc && mocha **/*.test.js",
+    "build": "tsc",
     "docs": "typedoc --out ../docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --excludeExternals",
     "docs-full": "typedoc --out ../docs --name \"Minecraft Blacklist Tool\" --target ES6 --mode file --includeDeclarations"
   },
