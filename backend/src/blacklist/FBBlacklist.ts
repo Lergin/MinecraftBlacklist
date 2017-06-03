@@ -29,10 +29,29 @@ export class FBBlacklist extends Blacklist{
 
     /**
      * adds all the entries that are in the given [[Blacklist]] and adds them to this [[FBBlacklist]]
+     *
      * @param blacklist the [[Blacklist]] whose entries should be copied
      */
     addEntriesFromBlacklist(blacklist: Blacklist){
-        blacklist.entries.map(FBBlacklist.blacklistEntryToFBBlacklistEntry(this._ref));
+        blacklist.entries.map((e) => this.add(e));
+    }
+
+    /**
+     * adds a deleted change to all entries in this blacklist that are not in the blacklist given by the parameter
+     *
+     * @param blacklist
+     */
+    setEntriesNotInBlacklistToDeleted(blacklist: Blacklist){
+        this.getDifference(blacklist).map((entry)=>entry.addChange("DELETE", new Date()));
+    }
+
+    /**
+     * adds the given blacklist entry to the blacklist
+     *
+     * @param blacklistEntry
+     */
+    add(blacklistEntry: BlacklistEntry){
+        FBBlacklist.blacklistEntryToFBBlacklistEntry(this._ref)(blacklistEntry);
     }
 
     /**

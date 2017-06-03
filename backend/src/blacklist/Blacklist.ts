@@ -57,11 +57,22 @@ export abstract class Blacklist {
      * @param change the change to filter out
      * @return a filter function that filters according to the given change
      */
-    static filterEntrysByLatestChangeUnequal(change: BlacklistEntryChangeTypes){
+    static filterEntriesByLatestChangeUnequal(change: BlacklistEntryChangeTypes){
         return (entry)=>{
             if(entry.changes.length === 0) return true;
 
             return entry.changes.sort(BlacklistEntry.sortChangesByDate)[0].type !== change;
         }
+    }
+
+    /**
+     * gets all entries of the current Blacklist that are not in the blacklist given by the parameter
+     * @param blacklist
+     * @return a list of entries that are only in the current blacklist
+     */
+    getDifference(blacklist: Blacklist){
+        let hashes = blacklist.entries.map((e) => e.hash);
+
+        return this.entries.filter((entry) => hashes.indexOf(entry.hash) === -1);
     }
 }

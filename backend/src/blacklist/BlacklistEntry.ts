@@ -121,7 +121,14 @@ export class BlacklistEntry {
         return sha1(value) === hash;
     }
 
+    /**
+     * a sort method that sorts [[BlacklistEntryChange BlacklistEntryChanges]] by the date so that the most recent
+     * change is in the beginning
+     * @param c1
+     * @param c2
+     * @return {number}
+     */
     static sortChangesByDate(c1: BlacklistEntryChange, c2: BlacklistEntryChange){
-        return c1.date.valueOf() - c2.date.valueOf();
+        return c2.date.valueOf() - c1.date.valueOf();
     }
 }

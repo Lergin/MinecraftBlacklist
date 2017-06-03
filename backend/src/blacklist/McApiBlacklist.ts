@@ -64,7 +64,7 @@ export class McApiBlacklist extends Blacklist implements Loading {
      * adds a ADD change to every entry that doesn't already have one as the latest change
      */
     addAddChangesToEntries() {
-        this.entries.filter(Blacklist.filterEntrysByLatestChangeUnequal("ADD")).forEach((entry)=>{
+        this.entries.filter(Blacklist.filterEntriesByLatestChangeUnequal("ADD")).forEach((entry)=>{
             entry.addChange("ADD", new Date());
         });
     }
