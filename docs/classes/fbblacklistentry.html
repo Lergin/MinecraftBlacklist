@@ -95,20 +95,24 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="fbblacklistentry.html#_changes" class="tsd-kind-icon">_changes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="fbblacklistentry.html#_domain" class="tsd-kind-icon">_domain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="fbblacklistentry.html#_hash" class="tsd-kind-icon">_hash</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="fbblacklistentry.html#_ref" class="tsd-kind-icon">_ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="fbblacklistentry.html#_server" class="tsd-kind-icon">_server</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklistentry.html#changes" class="tsd-kind-icon">changes</a></li>
-								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#domain" class="tsd-kind-icon">domain</a></li>
-								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#hash" class="tsd-kind-icon">hash</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklistentry.html#changes" class="tsd-kind-icon">changes</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#domain" class="tsd-kind-icon">domain</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#hash" class="tsd-kind-icon">hash</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklistentry.html#identified" class="tsd-kind-icon">identified</a></li>
-								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#server" class="tsd-kind-icon">server</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#server" class="tsd-kind-icon">server</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -117,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="fbblacklistentry.html#addchange" class="tsd-kind-icon">add<wbr>Change</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="fbblacklistentry.html#throwaway" class="tsd-kind-icon">throwaway</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="fbblacklistentry.html#ishash" class="tsd-kind-icon">is<wbr>Hash</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="fbblacklistentry.html#sortchangesbydate" class="tsd-kind-icon">sort<wbr>Changes<wbr>ByDate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -135,7 +140,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L11">src/blacklist/FBBlacklistEntry.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L12">src/blacklist/FBBlacklistEntry.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -159,15 +164,64 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_changes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _changes</h3>
+					<div class="tsd-signature tsd-kind-icon">_changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#_changes">_changes</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L45">src/blacklist/BlacklistEntry.ts:45</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>an array with all the changes to this entry, all changes can happen multiple times as a hash can be deleted from
+							the list and later added again</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_domain" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _domain</h3>
+					<div class="tsd-signature tsd-kind-icon">_domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#_domain">_domain</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L34">src/blacklist/BlacklistEntry.ts:34</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the domain of the entry (aka. the stuff that hashes to the hash)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_hash" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _hash</h3>
+					<div class="tsd-signature tsd-kind-icon">_hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#_hash">_hash</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L50">src/blacklist/BlacklistEntry.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the hash of the entry, all the information Mojang provides us with...</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="_ref" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _ref</h3>
 					<div class="tsd-signature tsd-kind-icon">_ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Reference</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L11">src/blacklist/FBBlacklistEntry.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L12">src/blacklist/FBBlacklistEntry.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -176,39 +230,87 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_server" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _server</h3>
+					<div class="tsd-signature tsd-kind-icon">_server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#_server">_server</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L39">src/blacklist/BlacklistEntry.ts:39</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the <a href="server.html">Server</a> the entry is assigned to</p>
+						</div>
+					</div>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
 					<a name="changes" class="tsd-anchor"></a>
 					<h3>changes</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> changes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> changes<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#changes">changes</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/BlacklistEntry.ts#L90">src/blacklist/BlacklistEntry.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L90">src/blacklist/BlacklistEntry.ts:90</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#changes">changes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L94">src/blacklist/BlacklistEntry.ts:94</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="domain" class="tsd-anchor"></a>
 					<h3>domain</h3>
-					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> domain<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> domain<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> domain<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#domain">domain</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L49">src/blacklist/FBBlacklistEntry.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L93">src/blacklist/FBBlacklistEntry.ts:93</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>sets the domain in the firebase, this calls the registered listener and updates the data saved in the instance
+									through it</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#domain">domain</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L52">src/blacklist/FBBlacklistEntry.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -220,17 +322,18 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="hash" class="tsd-anchor"></a>
 					<h3>hash</h3>
-					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> hash<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> hash<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -238,7 +341,22 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#hash">hash</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L41">src/blacklist/FBBlacklistEntry.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L89">src/blacklist/FBBlacklistEntry.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>sets the hash in the firebase, this calls the registered listener and updates the data saved in the instance
+									through it</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#hash">hash</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L44">src/blacklist/FBBlacklistEntry.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -268,7 +386,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#identified">identified</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/BlacklistEntry.ts#L68">src/blacklist/BlacklistEntry.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L68">src/blacklist/BlacklistEntry.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,18 +399,34 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="server" class="tsd-anchor"></a>
 					<h3>server</h3>
-					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> server<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> server<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> server<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#server">server</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L68">src/blacklist/FBBlacklistEntry.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L97">src/blacklist/FBBlacklistEntry.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>sets the server in the firebase, this calls the registered listener and updates the data saved in the instance
+									through it</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#server">server</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L85">src/blacklist/FBBlacklistEntry.ts:85</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -304,7 +438,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -325,7 +459,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#addchange">addChange</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/FBBlacklistEntry.ts#L57">src/blacklist/FBBlacklistEntry.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/FBBlacklistEntry.ts#L62">src/blacklist/FBBlacklistEntry.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -333,6 +467,7 @@
 									<p>adds a change of the entry to the firebase, this calls the registered listener and updates the array saved in the
 									instance through it</p>
 								</div>
+								<p>the date property is ignored and it uses the ServerValue.TIMESTAMP date from firebase</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -358,7 +493,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#throwaway">throwaway</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/BlacklistEntry.ts#L86">src/blacklist/BlacklistEntry.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L86">src/blacklist/BlacklistEntry.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,7 +518,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#ishash">isHash</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/d9b291d/backend/src/blacklist/BlacklistEntry.ts#L116">src/blacklist/BlacklistEntry.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L120">src/blacklist/BlacklistEntry.ts:120</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -402,6 +537,39 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 							<p>true if they match, false otherwise</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="sortchangesbydate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> sort<wbr>Changes<wbr>ByDate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">sort<wbr>Changes<wbr>ByDate<span class="tsd-signature-symbol">(</span>c1<span class="tsd-signature-symbol">: </span><a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a>, c2<span class="tsd-signature-symbol">: </span><a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="blacklistentry.html">BlacklistEntry</a>.<a href="blacklistentry.html#sortchangesbydate">sortChangesByDate</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Lergin/MinecraftBlacklist/blob/5ce2e15/backend/src/blacklist/BlacklistEntry.ts#L131">src/blacklist/BlacklistEntry.ts:131</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>a sort method that sorts <a href="../globals.html#blacklistentrychange">BlacklistEntryChanges</a> by the date so that the most recent
+									change is in the beginning</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>c1: <a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a></h5>
+								</li>
+								<li>
+									<h5>c2: <a href="../globals.html#blacklistentrychange" class="tsd-signature-type">BlacklistEntryChange</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -437,22 +605,34 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="fbblacklistentry.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="fbblacklistentry.html#_changes" class="tsd-kind-icon">_changes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="fbblacklistentry.html#_domain" class="tsd-kind-icon">_domain</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="fbblacklistentry.html#_hash" class="tsd-kind-icon">_hash</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="fbblacklistentry.html#_ref" class="tsd-kind-icon">_ref</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="fbblacklistentry.html#_server" class="tsd-kind-icon">_server</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
 								<a href="fbblacklistentry.html#changes" class="tsd-kind-icon">changes</a>
 							</li>
-							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="fbblacklistentry.html#domain" class="tsd-kind-icon">domain</a>
 							</li>
-							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="fbblacklistentry.html#hash" class="tsd-kind-icon">hash</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 								<a href="fbblacklistentry.html#identified" class="tsd-kind-icon">identified</a>
 							</li>
-							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="fbblacklistentry.html#server" class="tsd-kind-icon">server</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
@@ -463,6 +643,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="fbblacklistentry.html#ishash" class="tsd-kind-icon">is<wbr>Hash</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="fbblacklistentry.html#sortchangesbydate" class="tsd-kind-icon">sort<wbr>Changes<wbr>ByDate</a>
 							</li>
 						</ul>
 					</li>
@@ -500,9 +683,6 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#serviceaccount" class="tsd-kind-icon">service<wbr>Account</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="../globals.html#sha1" class="tsd-kind-icon">sha1</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="../globals.html#asyncfilter" class="tsd-kind-icon">async<wbr>Filter</a>
