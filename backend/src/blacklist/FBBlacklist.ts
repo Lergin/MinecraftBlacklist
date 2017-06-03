@@ -1,5 +1,6 @@
 import {FBBlacklistEntry} from "./FBBlacklistEntry";
 import {Blacklist} from "./Blacklist";
+import {BlacklistEntry} from "./BlacklistEntry";
 
 /**
  * a implementation of the [[Blacklist]] that uses [[https://firebase.google.com Firebase]] as a data source for the
@@ -24,5 +25,35 @@ export class FBBlacklist extends Blacklist{
         this._ref.on("child_added", (snapshot)=>{
             this._entries.push(new FBBlacklistEntry(snapshot.ref));
         })
+    }
+
+    /**
+     * adds all the entries that are in the given [[Blacklist]] and adds them to this [[FBBlacklist]]
+     * @param blacklist the [[Blacklist]] whose entries should be copied
+     */
+    addEntriesFromBlacklist(blacklist: Blacklist){
+        blacklist.entries.map(FBBlacklist.blacklistEntryToFBBlacklistEntry(this._ref));
+    }
+
+    /**
+     * Creates a function that creates a [[FBBlacklistEntry]] from a [[BlacklistEntry]].
+     *
+     * This is done by creating a new [[FBBlacklistEntry]] with a child reference from the given reference that is using
+     * the hash as child path and then setting the coping the data to the new [[FBBlacklistEntry]]
+     *
+     * @param ref the root reference for all the blacklist entries (the new entries are created as children of this ref)
+     * @return {(entry:BlacklistEntry)=>FBBlacklistEntry} a function that takes a [[BlacklistEntry]] and then converts
+     * it into a [[FBBlacklistEntry]]
+     */
+    private static blacklistEntryToFBBlacklistEntry(ref: admin.database.Reference){
+        return (entry: BlacklistEntry) => {
+            let fbBlacklistEntry = new FBBlacklistEntry(ref.child(entry.hash));
+
+            fbBlacklistEntry.hash = entry.hash;
+            fbBlacklistEntry.domain = entry.domain;
+            fbBlacklistEntry.addChange("ADD", new Date());
+
+            return fbBlacklistEntry;
+        }
     }
 }

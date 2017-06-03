@@ -1,6 +1,7 @@
 import * as admin from "firebase-admin";
 import {FBThrowawayMatcher} from "./throwawayMatcher/FBThrowawayMatcher";
 import {McApiBlacklist} from "./blacklist/McApiBlacklist";
+import {FBBlacklist} from "./blacklist/FBBlacklist";
 const serviceAccount = require("../../firebase_service_account.json");
 
 async function main(){
@@ -13,12 +14,17 @@ async function main(){
     await throwawayMatcher.loadingPromise;
 
     let list = new McApiBlacklist();
+    let fbList = new FBBlacklist(admin.database().ref("entries"));
 
     list.update().then(async ()=>{
-        console.log(list.unknown.length);
-        console.log(list.known.length);
-        console.log((await list.throwaway).length);
+        list.addAddChangesToEntries();
+        console.log(`Unknown: ${list.unknown.length}`);
+        console.log(`Known: ${list.known.length}`);
+        list.throwaway.then((a) => console.log(`Throwaways: ${a.length}`));
+
+        fbList.addEntriesFromBlacklist(list);
     });
+
 }
 
 

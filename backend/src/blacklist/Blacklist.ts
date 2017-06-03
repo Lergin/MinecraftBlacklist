@@ -1,4 +1,4 @@
-import {BlacklistEntry} from "./BlacklistEntry";
+import {BlacklistEntry, BlacklistEntryChangeTypes} from "./BlacklistEntry";
 import {asyncFilter} from "../Utils";
 
 /**
@@ -39,7 +39,7 @@ export abstract class Blacklist {
      * @return a Promise with the throwaway entries
      */
     get throwaway(){
-        return asyncFilter(this.entries, async (e)=>!await e.throwaway())
+        return asyncFilter(this.entries, async (e)=>await e.throwaway())
     }
 
     /**
@@ -49,5 +49,19 @@ export abstract class Blacklist {
      */
     get(hash:string) : BlacklistEntry{
         return this.entries.find((entry) => entry.hash === hash);
+    }
+
+    /**
+     * creates a filter function that filters a entry by the latest [[BlacklistEntryChange]] that has happened to it, so
+     * that only entries return true that do not have the change, given to the function, as latest change.
+     * @param change the change to filter out
+     * @return a filter function that filters according to the given change
+     */
+    static filterEntrysByLatestChangeUnequal(change: BlacklistEntryChangeTypes){
+        return (entry)=>{
+            if(entry.changes.length === 0) return true;
+
+            return entry.changes.sort(BlacklistEntry.sortChangesByDate)[0].type !== change;
+        }
     }
 }

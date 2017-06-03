@@ -1,5 +1,5 @@
 import * as fetch from "node-fetch";
-import {BlacklistEntry} from "./BlacklistEntry";
+import {BlacklistEntry, BlacklistEntryChangeTypes} from "./BlacklistEntry";
 import {Blacklist} from "./Blacklist";
 import {Loading} from "../Utils";
 
@@ -58,6 +58,15 @@ export class McApiBlacklist extends Blacklist implements Loading {
      */
     get loadingPromise() {
         return this._loadingPromise;
+    }
+
+    /**
+     * adds a ADD change to every entry that doesn't already have one as the latest change
+     */
+    addAddChangesToEntries() {
+        this.entries.filter(Blacklist.filterEntrysByLatestChangeUnequal("ADD")).forEach((entry)=>{
+            entry.addChange("ADD", new Date());
+        });
     }
 
     /**

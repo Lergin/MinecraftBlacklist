@@ -1,4 +1,4 @@
-const sha1 = require("sha1");
+import * as sha1 from "sha1";
 import {ThrowawayMatcher} from "../throwawayMatcher/ThrowawayMatcher";
 
 /**
@@ -31,23 +31,23 @@ export class BlacklistEntry {
     /**
      * the domain of the entry (aka. the stuff that hashes to the hash)
      */
-    private _domain: string = "";
+    protected _domain: string = "";
 
     /**
      * the [[Server]] the entry is assigned to
      */
-    private _server: string = "";
+    protected _server: string = "";
 
     /**
      * an array with all the changes to this entry, all changes can happen multiple times as a hash can be deleted from
      * the list and later added again
      */
-    private _changes: Array<BlacklistEntryChange> = [];
+    protected _changes: Array<BlacklistEntryChange> = [];
 
     /**
      * the hash of the entry, all the information Mojang provides us with...
      */
-    private _hash: string;
+    protected _hash: string;
 
     constructor(hash){
         this._hash = hash;
@@ -91,6 +91,10 @@ export class BlacklistEntry {
         return this._changes;
     }
 
+    set changes(value: Array<BlacklistEntryChange>) {
+        this._changes = value;
+    }
+
     /**
      * adds a new change of the entry
      */
@@ -115,5 +119,9 @@ export class BlacklistEntry {
      */
     static isHash(hash, value){
         return sha1(value) === hash;
+    }
+
+    static sortChangesByDate(c1: BlacklistEntryChange, c2: BlacklistEntryChange){
+        return c1.date.valueOf() - c2.date.valueOf();
     }
 }
